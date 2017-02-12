@@ -27,7 +27,7 @@ A. System commands,
 B. Built-in commands,
 C. Pipe operator.
 
-A. System commands 
+	A. System commands 
 
 It will take the command as input and will execute that in a new process. When your program
 gets the program name, it will create a new process using fork system call, and the new process (child) will execute the
@@ -37,7 +37,9 @@ If the command does not include a pathname, then you can use execvp().
 CSE333sh: ls -l
 If the command includes a pathname, then you can use execl() providing full
 (absolute) pathname.
+
 CSE333sh: /bin/ls ls -l
+
 CSE333sh: /bin/ls ls -l /home/user1/Desktop
 
 Important Notes:
@@ -48,8 +50,10 @@ wait for the task to complete, then immediately prompt the user for another comm
 333sh: gedit
 	A background process is indicated by placing an ampersand (’&’) character at the end of an input line. When a process
 run in background, your shell should not wait for the task to complete, but immediately prompt the user for another command.
+
 333sh: gedit &
-B. Built-in commands
+
+	B. Built-in commands
 
 Your shell must support the following internal (built-in) commands. Note that an internal command is the one for which no new
 process is created but instead the functionality is built directly into the shell itself.
@@ -70,6 +74,7 @@ complete. Thus, you can start more than one job by repeatedly using the trailing
 built-in command wait should not return until all background processes are complete. In this example below, wait will not return
 until the three processes all are finished.
 	o Example:
+ 
  333sh: gedit &
  333sh: firefox &
  333sh: gnome-calculator &
@@ -83,7 +88,6 @@ hist – This command is for maintaining a history of commands previously issued
 which command to repeat.
 Note that “! 1” is for repeating the command numbered 1 in the list of
 commands returned by history, and “! -1” is for repeating the last command.
-
 	o ! string - A user should be able to repeat a previously issued command by typing ! string, where string indicates the
 first characters of a most-recent command. If a user has executed “chmod 777 a.sh” and wants to repeat this command, “! chm” can
 be used.
@@ -93,9 +97,9 @@ exit - Terminate your shell process.
 	o If the user chooses to exit while there are background processes, notify the user that there are background processes
 still running and do not terminate the shell process unless the user terminates all background processes.
 
-C. Pipe operator
+	C. Pipe operator
 
-	The shell must support pipe operator “|”. For a pipe in the command line, you need to take care of connecting stdout of
+The shell must support pipe operator “|”. For a pipe in the command line, you need to take care of connecting stdout of
 the left command to stdin of the command following the "|". For example, if the user types "ls -al | sort", then the “ls”
 command is run with stdout directed to a Unix pipe, and that the sort command is run with stdin coming from that same pipe.
 
