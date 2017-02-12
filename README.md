@@ -8,8 +8,8 @@ Main.out involve all source code and header file.
 
 
 	CSE 333 - OPERATING SYSTEMS
-
-	This programming assignment is to write a simple shell. The shell accepts user commands and then executes each command
+	
+This programming assignment is to write a simple shell. The shell accepts user commands and then executes each command
 in a separate process. One technique for implementing a shell interface is to have the parent process first read what the user
 enters on the command line and then create a separate child process that performs the command. Unless otherwise specified, the
 parent process waits for the child to exit before continuing. However, UNIX shells typically also allow the child process to run
