@@ -38,9 +38,8 @@ CSE333sh: ls -l
 If the command includes a pathname, then you can use execl() providing full
 (absolute) pathname.
 
-CSE333sh: /bin/ls ls -l
-
-CSE333sh: /bin/ls ls -l /home/user1/Desktop
+	CSE333sh: /bin/ls ls -l
+	CSE333sh: /bin/ls ls -l /home/user1/Desktop
 
 Important Notes:
 
@@ -51,7 +50,7 @@ wait for the task to complete, then immediately prompt the user for another comm
 	A background process is indicated by placing an ampersand (’&’) character at the end of an input line. When a process
 run in background, your shell should not wait for the task to complete, but immediately prompt the user for another command.
 
-333sh: gedit &
+	333sh: gedit &
 
 	B. Built-in commands
 
@@ -75,10 +74,13 @@ built-in command wait should not return until all background processes are compl
 until the three processes all are finished.
 	o Example:
  
- 333sh: gedit &
- 333sh: firefox &
- 333sh: gnome-calculator &
- 333sh: wait
+ 	333sh: gedit &
+ 
+ 	333sh: firefox &
+ 
+ 	333sh: gnome-calculator &
+ 
+ 	333sh: wait
 
 
 hist – This command is for maintaining a history of commands previously issued.
