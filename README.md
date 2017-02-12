@@ -50,7 +50,9 @@ wait for the task to complete, then immediately prompt the user for another comm
 	A background process is indicated by placing an ampersand (’&’) character at the end of an input line. When a process
 run in background, your shell should not wait for the task to complete, but immediately prompt the user for another command.
 
+
 	333sh: gedit &
+
 
 	B. Built-in commands
 
@@ -106,7 +108,9 @@ the left command to stdin of the command following the "|". For example, if the 
 command is run with stdout directed to a Unix pipe, and that the sort command is run with stdin coming from that same pipe.
 
 Bonus: You will get 10% extra credit if your shell supports multiple pipes! (e.g., prog1 | prog2 | ... | progN)
-Notes:
+
+	Notes:
+
 You can assume that all command line arguments will be delimited from other command
 line arguments by white space – one or more spaces and/or tabs.
 For this project, the error messages should be printed to stderr
