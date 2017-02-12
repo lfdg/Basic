@@ -1,6 +1,7 @@
 ﻿# Basic - Shell
 
 If you can compile  and use this shell, try this line on terminal:
+
 	gcc -o main.out mainSetup.c builtin.c systemcom.c pipe.c -I.
 
 Main.out involve all source code and header file.
@@ -49,7 +50,6 @@ wait for the task to complete, then immediately prompt the user for another comm
 333sh: gedit
 	A background process is indicated by placing an ampersand (’&’) character at the end of an input line. When a process
 run in background, your shell should not wait for the task to complete, but immediately prompt the user for another command.
-
 
 	333sh: gedit &
 
